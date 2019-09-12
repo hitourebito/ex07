@@ -13,9 +13,55 @@
   {
     if (count($_POST["require_value"])) 
     {
-      foreach ($_POST["require_value"] as $key => $value) 
+      date_default_timezone_set("Asia/Tokyo");
+      $tm = time();
+      echo "日本:", date("Y/m/d/ A g:i:s", $tm), "<br/>";
+
+      foreach ($_POST["require_value"] as $value) 
       {
-        echo $value, "<br/>";
+        switch ($value) 
+        {
+          case 'イースター島':
+            date_default_timezone_set("Pacific/Easter");
+            $tm = time();
+            echo $value, date("Y/m/d/ A g:i:s", $tm), "<br/>";
+            break;
+          case 'モルディブ':
+            date_default_timezone_set("Indian/Maldives");
+            $tm = time();
+            echo $value, date("Y/m/d/ A g:i:s", $tm), "<br/>";
+            break;
+          case 'ローマ':
+            date_default_timezone_set("Europe/Rome");
+            $tm = time();
+            echo $value, date("Y/m/d/ A g:i:s", $tm), "<br/>";
+            break;
+          case 'モスクワ':
+            date_default_timezone_set("Europe/Moscow");
+            $tm = time();
+            echo $value, date("Y/m/d/ A g:i:s", $tm), "<br/>";
+            break;
+          case 'シドニー':
+            date_default_timezone_set("Australia/Sydney");
+            $tm = time();
+            echo $value, date("Y/m/d/ A g:i:s", $tm), "<br/>";
+            break;
+          case 'シンガポール':
+            date_default_timezone_set("Asia/Singapore");
+            $tm = time();
+            echo $value, date("Y/m/d/ A g:i:s", $tm), "<br/>";
+            break;
+          case '平壌':
+            date_default_timezone_set("Asia/Pyongyang");
+            $tm = time();
+            echo $value, date("Y/m/d/ A g:i:s", $tm), "<br/>";
+            break;
+          default:
+            date_default_timezone_set("Asia/Tokyo");
+            $tm = time();
+            echo $value, date("Y/m/d/ A g:i:s", $tm), "<br/>";
+            break;
+        }
       }
     } else 
     {
