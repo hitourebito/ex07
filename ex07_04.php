@@ -83,7 +83,5 @@
     </div>
     <input type="submit" name="btn" value="送信">
   </form>
-<?php } 
-  
-?>
+<?php } ?>
 </body>
