@@ -9,6 +9,9 @@
 </head>
 <body>
 <?php //phpここから
+  date_default_timezone_set("Asia/Tokyo");
+  $errflg = 0;
+  $errmsg = array();
 
 //phpここまで ?>
 </body>
