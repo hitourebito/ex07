@@ -65,7 +65,9 @@
       }
     } else 
     {
-      echo "配列飛んできてないから、日本だけ出す";
+      date_default_timezone_set("Asia/Tokyo");
+      $tm = time();
+      echo "日本:", date("Y/m/d/ A g:i:s", $tm);
     }
   } else {
 //phpここまで ?>
