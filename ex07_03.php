@@ -65,4 +65,15 @@
       echo $value, "<br/>";
     }
 //phpここまで ?>
+
+<form action="<?= $_SERVER["SCRIPT_NAME"]?>" method="POST">
+  <div>誕生日:
+    <input type="text" name="month" size="10" value=<?=  $_POST["month"]?> >月
+    <input type="text" name="day" size="10" value=<?= $_POST["day"] ?> >日
+  </div>
+  <input type="submit" name="btn" value="送信">
+</form>
+<?php 
+} 
+?>
 </body>
