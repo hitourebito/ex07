@@ -11,6 +11,16 @@
 <?php //phpここから
   if ($_SERVER["REQUEST_METHOD"] == "POST") 
   {
+    if (count($_POST["require_value"])) 
+    {
+      foreach ($_POST["require_value"] as $key => $value) 
+      {
+        echo $value, "<br/>";
+      }
+    } else 
+    {
+      echo "配列飛んできてないから、日本だけ出す";
+    }
   } else {
 //phpここまで ?>
   <form action="<?= $_SERVER["SCRIPT_NAME"]?>" method="POST">
